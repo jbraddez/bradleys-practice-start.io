@@ -221,6 +221,10 @@ handleScroll();
             var globeText3 = document.querySelector('.globe-text3');
             var screenWidth = window.innerWidth;
             var globediv = document.querySelector('.globe-div');
+
+            if (screenWidth > 699 && screenWidth < 901){
+                globediv.style.top = '900px'
+            }
             
             
             if (screenWidth < 700){
@@ -231,7 +235,7 @@ handleScroll();
                 globeText2.style.transform = 'translateX(0)';
                 globeText3.style.width = '100%';
                 globeText2.style.width = '100%';
-                globediv.style.top = '800px';
+                globediv.style.top = '130%';
                 
             }else{
                 globeText1.style.fontSize = '40px';
