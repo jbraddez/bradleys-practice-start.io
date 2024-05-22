@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/mse4ehy.css">
 </head>
 <body>
-
+<main>
     <div class="landing-page-top-image">
         <img class="landing-image" type="jpg" src="https://lirp.cdn-website.com/824e2ea7/dms3rep/multi/opt/StockSnap_KSVNE2NWQP-1920x1280-1920w.jpg" alt="An antique pocket watch in the palm of a hand">
         <div class="text-fading-container">
@@ -39,6 +39,26 @@
         <h4 class="landing-text globe-text2">Bradleys have been in the moving and antique transport business for over 30 years with a combined wealth of experience spanning 70 years there isn’t anything we haven’t packed or shipped.</h4>
         <h4 class="landing-text globe-text3">UK and European transport are carried out in our own vehicles with our experienced, capable and friendly staff. Worldwide shipments are packed by us and we have agents worldwide who will deliver and install on our behalf.</h4>
     </div>
+
+    <div class="landing-country-box">
+        <a href="regular-deliveries.html" id="country-but1" class="landing-country-but">
+            <img id="count-img1" class="landing-country-img" src="https://lirp.cdn-website.com/824e2ea7/dms3rep/multi/opt/Mallorca1-1920w.jpg">
+            <p id="lct1" class="landing-country-text">Mallorca Deliveries</p>
+        </a>
+        <a href="regular-deliveries.html" id="country-but2" class="landing-country-but">
+            <img id="count-img2" class="landing-country-img" src="https://lirp.cdn-website.com/824e2ea7/dms3rep/multi/opt/london+crop-1920w.jpg">
+            <p id="lct2" class="landing-country-text">London Deliveries</p>
+        </a>
+        <a href="regular-deliveries.html" id="country-but3" class="landing-country-but">
+            <img id="count-img3" class="landing-country-img" src="https://lirp.cdn-website.com/824e2ea7/dms3rep/multi/opt/IMG_5591-1920w.JPG">
+            <p id="lct3" class="landing-country-text">Ireland Deliveries</p>
+        </a>
+    </div>
+    
+    
+
+</main>
+
     
 
 
@@ -50,16 +70,18 @@
         <div class="dropdown">
             <button class="dropbtn"><div class="dropbtncont"></div><div class="dropbtncont"></div><div class="dropbtncont"></div></button>
             <div class="dropdown-content">
-              <a href="">Regular Deliveries</a>
-              <a href="">Collections & Firearms</a>
-              <a href="">Shipping</a>
-              <a href="">Removals & Storage</a>
-              <a href="">Insurance</a>
-              <a href="">Contact</a>
+              <a href="regular-deliveries.html">Regular Deliveries</a>
+              <a href="collectionsandfirearms.html">Collections & Firearms</a>
+              <a href="shipping.html">Shipping</a>
+              <a href="removalsandstorage.html">Removals & Storage</a>
+              <a href="insurance.html">Insurance</a>
+              <a href="contactus.html">Contact Us</a>
             </div>
           </div>
 
     </header>
+
+    <div class="arrow"></div>
 
 
     
@@ -235,7 +257,7 @@ handleScroll();
                 globeText2.style.transform = 'translateX(0)';
                 globeText3.style.width = '100%';
                 globeText2.style.width = '100%';
-                globediv.style.top = '130%';
+                globediv.style.top = '125%';
                 
             }else{
                 globeText1.style.fontSize = '40px';
@@ -254,7 +276,101 @@ handleScroll();
         window.addEventListener('resize', globetextSize)
         window.addEventListener('load', globetextSize)
     </script>
-    
+    <script>
+        function changecountrybut(){
+            var screenWidth = window.innerWidth;
+            var ccb = document.getElementsByClassName('landing-country-but');
+            var lc_box = document.querySelector('.landing-country-box');
+            if (screenWidth > 950){
+                ccb[0].style.width = '300px';
+                ccb[1].style.width = '300px';
+                ccb[2].style.width = '300px';
+
+                ccb[0].style.height = '300px';
+                ccb[1].style.height = '300px';
+                ccb[2].style.height = '300px';
+                
+                lc_box.style.top = '150%'
+            }else{
+                if (screenWidth > 700){
+                    ccb[0].style.width = '150px';
+                    ccb[1].style.width = '150px';
+                    ccb[2].style.width = '150px';
+
+                    ccb[0].style.height = '150px';
+                    ccb[1].style.height = '150px';
+                    ccb[2].style.height = '150px';
+                    lc_box.style.top = '155%'
+                }else{
+                    ccb[0].style.width = '100px';
+                    ccb[1].style.width = '100px';
+                    ccb[2].style.width = '100px';
+
+                    ccb[0].style.height = '100px';
+                    ccb[1].style.height = '100px';
+                    ccb[2].style.height = '100px';
+                    lc_box.style.top = '160%'
+                }
+                
+
+            }
+        }
+        window.addEventListener('resize', changecountrybut)
+        window.addEventListener('load', changecountrybut)
+    </script>
+    <script>
+        function landing_countries(){
+            var screenWidth = window.innerWidth;
+            var lc1 = document.getElementById('lct1');
+            var lc2 = document.getElementById('lct2');
+            var lc3 = document.getElementById('lct3');
+
+            var ci1 = document.getElementById('count-img1');
+            var ci2 = document.getElementById('count-img2');
+            var ci3 = document.getElementById('count-img3');
+
+            var cb1 = document.getElementById('country-but1');
+            var cb2 = document.getElementById('country-but2');
+            var cb3 = document.getElementById('country-but3');
+            
+            if (screenWidth > 900){
+                lc1.style.fontSize = '26px';
+                lc2.style.fontSize = '26px';
+                lc3.style.fontSize = '26px';
+
+                ci1.style.filter = '';
+                ci2.style.filter = '';
+                ci3.style.filter = '';
+
+                lc1.style.opacity = '';
+                lc2.style.opacity = '';
+                lc3.style.opacity = '';
+
+            }else{
+                ci1.style.filter = 'brightness(70%)';
+                ci2.style.filter = 'brightness(70%)';
+                ci3.style.filter = 'brightness(70%)';
+
+                lc1.style.opacity = '1';
+                lc2.style.opacity = '1';
+                lc3.style.opacity = '1';
+
+                
+           
+                if (screenWidth > 700){
+                    lc1.style.fontSize = '21px';
+                    lc2.style.fontSize = '21px';
+                    lc3.style.fontSize = '21px';
+                }else{
+                    lc1.style.fontSize = '12px';
+                    lc2.style.fontSize = '12px';
+                    lc3.style.fontSize = '12px';
+                }
+            }
+        }
+        window.addEventListener('resize', landing_countries)
+        window.addEventListener('load', landing_countries)
+    </script>
     
     
     
